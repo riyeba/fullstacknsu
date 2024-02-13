@@ -69,7 +69,6 @@ ALLOWED_HOSTS = ["localhost","127.0.0.1","nsu-ksu-app.onrender.com"]
 
 INSTALLED_APPS = [
     'nsuapp',
-     'tailwind',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
