@@ -24,7 +24,7 @@ function FormSubmit() {
     formData.append("photo", photo);
 
     axios
-      .post("https://fullstackfa.onrender.com/info/", formData, {
+      .post("http://127.0.0.1:8000/info", formData, {
         headers: { Authorization: `Token ${localStorage.getItem("token")}` },
       })
       .then((response) => {
@@ -44,7 +44,7 @@ function FormSubmit() {
     e.preventDefault();
 
     SubmitInfo();
-    navigate("/member");
+    navigate("/info");
   }
 
   return (

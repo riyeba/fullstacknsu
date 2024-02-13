@@ -59,9 +59,9 @@ SECRET_KEY = 'django-insecure-0hd@37u&px3^(@cugjq(uyeuwsigfr+p)u3cqg4v6=k)jn&cof
 
 
 #HTTPS settings
-SESSION_COOKIE_SECURE=True
-CSRF_COOKIE_SECURE=True
-SECURE_SSL_REDIRECT=True
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+SECURE_SSL_REDIRECT = False
 
 #HSTS settings
 SECURE_HSTS_SECONDS=31536000
