@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'True')=="False"
+DEBUG = os.environ.get('DEBUG', 'True')=="True"
 
 # Following settings only make sense on production and may break development environments.
 STATIC_URL = 'static/'
