@@ -25,7 +25,7 @@ from django.conf.urls import url
 from django.urls import include, re_path
 from django.views.generic import TemplateView
 from django.shortcuts import render
-import certbot_django.server.urls
+
 
 def index_view(request):
     return render(request,'dist/index.html')
@@ -38,7 +38,7 @@ urlpatterns = [
     re_path('info/', (views.info_list)),
     re_path('info/<int:id>', (views.info_detail)),
     re_path(r'^favicon\.ico$',RedirectView.as_view(url='/static/images/favicon.ico')),
-    url(r'^\.well-known/', include(certbot_django.server.urls)),
+    
     
    
 ]
