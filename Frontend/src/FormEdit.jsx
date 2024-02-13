@@ -35,7 +35,7 @@ function FormEditor() {
     formData.append("photo", photo);
 
     return await axios
-      .put(`http://127.0.0.1:8000/info/${id}`, formData, {
+      .put(`https://fullstackfa.onrender.com/info/${id}`, formData, {
         headers: { Authorization: `Token ${localStorage.getItem("token")}` },
       })
       .then((response) => {
