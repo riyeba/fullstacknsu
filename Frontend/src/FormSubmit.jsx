@@ -44,7 +44,7 @@ function FormSubmit() {
     e.preventDefault();
 
     SubmitInfo();
-    navigate("/info");
+    navigate("/member");
   }
 
   return (
