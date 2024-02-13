@@ -85,6 +85,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
+    'certbot_django.server'
 ]
 
 MIDDLEWARE = [

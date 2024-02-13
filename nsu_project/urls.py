@@ -21,22 +21,24 @@ from rest_framework.urlpatterns import  format_suffix_patterns
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic.base import RedirectView
-# from django.conf.urls import url
+from django.conf.urls import url
 from django.urls import include, re_path
 from django.views.generic import TemplateView
 from django.shortcuts import render
+import certbot_django.server.urls
 
 def index_view(request):
     return render(request,'dist/index.html')
 
 
 urlpatterns = [
-    # path("", TemplateView.as_view(template_name='index.html')),
+    
     re_path('',index_view, name='index'),
     re_path('admin/', admin.site.urls),
     re_path('info/', (views.info_list)),
     re_path('info/<int:id>', (views.info_detail)),
     re_path(r'^favicon\.ico$',RedirectView.as_view(url='/static/images/favicon.ico')),
+    url(r'^\.well-known/', include(certbot_django.server.urls)),
     
    
 ]
