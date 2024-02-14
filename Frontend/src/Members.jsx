@@ -34,7 +34,7 @@ function Members() {
 
   async function deleteInf(id, el) {
     return await axios
-      .delete(`http://127.0.0.1:8000/info/${id}`, {
+      .delete(`https://fullstackfa.onrender.com/info/${id}`, {
         headers: {
           "Content-Type": "application/json",
           // token: token,

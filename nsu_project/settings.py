@@ -32,7 +32,7 @@ STATIC_URL = 'static/'
 import mimetypes
 mimetypes.add_type("text/css", ".css", True)
 STATICFILES_DIRS=[
-    # os.path.join(BASE_DIR,'Frontend/dist/assets')
+    
     BASE_DIR.joinpath('Frontend/dist')
 ]
 
@@ -58,17 +58,18 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 SECRET_KEY = 'django-insecure-0hd@37u&px3^(@cugjq(uyeuwsigfr+p)u3cqg4v6=k)jn&cof'
 
 
-#HTTPS settings
-SESSION_COOKIE_SECURE = False
-CSRF_COOKIE_SECURE = False
-SECURE_SSL_REDIRECT = False
+# #HTTPS settings
+# SESSION_COOKIE_SECURE=False
+# CSRF_COOKIE_SECURE=False
+# SECURE_SSL_REDIRECT=False
 
-#HSTS settings
-SECURE_HSTS_SECONDS=31536000
-SECURE_HSTS_PRELOAD=True
-SECURE_HSTS_INCLUDE_SUBDOMAINS=True
+# #HSTS settings
+# SECURE_HSTS_SECONDS=31536000
+# SECURE_HSTS_PRELOAD=True
+# SECURE_HSTS_INCLUDE_SUBDOMAINS=True
 
-
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY = True
 
 ALLOWED_HOSTS = ["localhost","127.0.0.1","nsu-ksu-app.onrender.com","fullstackfa.onrender.com"]
 
