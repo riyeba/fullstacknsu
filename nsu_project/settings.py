@@ -122,8 +122,8 @@ REST_FRAMEWORK = {
 ROOT_URLCONF = 'nsu_project.urls'
 
 CORS_ORIGIN_WHITELIST = [
-"fullstackfa.onrender.com",
-"127.0.0.1"
+"https://fullstackfa.onrender.com"
+
 ]
 CORS_ALLOW_CREDENTIALS = True
 
