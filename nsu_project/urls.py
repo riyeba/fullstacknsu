@@ -37,7 +37,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('info/', (views.info_list)),
     path('info/<int:id>', (views.info_detail)),
-    path(r'^favicon\.ico$',RedirectView.as_view(url='/static/images/favicon.ico')),
+   
     
     
    
