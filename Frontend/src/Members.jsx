@@ -12,7 +12,7 @@ function Members() {
 
   function HandleInfo() {
     axios
-      .get(`https://fullstackfa.onrender.com/info/`, {
+      .get(`https://fullstackfa.onrender.com/info`, {
         headers: {
           Authorization: `Token ${localStorage.getItem("token")}`,
         },
