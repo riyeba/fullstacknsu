@@ -83,7 +83,7 @@ function Members() {
                     </tr>
                   </thead>
 
-                  {info?.map((el, id) => (
+                  {info.map((el, id) => (
                     <tbody className="bg-white" key={id}>
                       <tr className="text-gray-700">
                         <td className="px-4 py-3 border">
