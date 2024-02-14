@@ -33,11 +33,11 @@ def index_view(request):
 
 urlpatterns = [
     
-    re_path('',index_view, name='index'),
-    re_path('admin/', admin.site.urls),
-    re_path('info/', (views.info_list)),
-    re_path('info/<int:id>', (views.info_detail)),
-    re_path(r'^favicon\.ico$',RedirectView.as_view(url='/static/images/favicon.ico')),
+    path('',index_view, name='index'),
+    path('admin/', admin.site.urls),
+    path('info/', (views.info_list)),
+    path('info/<int:id>', (views.info_detail)),
+    path(r'^favicon\.ico$',RedirectView.as_view(url='/static/images/favicon.ico')),
     
     
    

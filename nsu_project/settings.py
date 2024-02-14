@@ -71,7 +71,7 @@ SECRET_KEY = 'django-insecure-0hd@37u&px3^(@cugjq(uyeuwsigfr+p)u3cqg4v6=k)jn&cof
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = True
 
-ALLOWED_HOSTS = ["localhost","127.0.0.1","nsu-ksu-app.onrender.com","fullstackfa.onrender.com"]
+ALLOWED_HOSTS = [,"fullstackfa.onrender.com"]
 
 
 # Application definition
@@ -88,6 +88,7 @@ INSTALLED_APPS = [
     'corsheaders',
     
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
