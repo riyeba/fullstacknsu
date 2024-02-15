@@ -76,7 +76,7 @@ function Members() {
                 <table className="w-full">
                   <thead>
                     <tr className="text-md font-bold tracking-wide text-left text-gray-900 bg-gray-50 uppercase border-b border-gray-600">
-                      <th className="px-4 py-3">Photo</th>
+                      
                       <th className="px-4 py-3">Name</th>
                       <th className="px-4 py-3">Phone</th>
                       <th className="px-4 py-3"> Building/room</th>

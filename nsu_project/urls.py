@@ -30,13 +30,14 @@ from django.shortcuts import render
 def index_view(request):
     return render(request,'dist/index.html')
 
-
+favicon_view = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
 urlpatterns = [
     
     path('',index_view, name='index'),
     path('admin/', admin.site.urls),
     path('info/', (views.info_list)),
     path('info/<int:id>', (views.info_detail)),
+    path(r'^favicon\.ico$', favicon_view)
    
     
     
