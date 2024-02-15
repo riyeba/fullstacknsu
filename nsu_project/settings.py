@@ -71,7 +71,7 @@ SECRET_KEY = 'django-insecure-0hd@37u&px3^(@cugjq(uyeuwsigfr+p)u3cqg4v6=k)jn&cof
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = True
 
-ALLOWED_HOSTS = ["fullstackfa.onrender.com","127.0.0.1"]
+ALLOWED_HOSTS = ["localhost","127.0.0.1","nsu-ksu-app.onrender.com","fullstackfa.onrender.com"]
 
 
 # Application definition
@@ -121,10 +121,7 @@ REST_FRAMEWORK = {
 
 ROOT_URLCONF = 'nsu_project.urls'
 
-CORS_ORIGIN_WHITELIST = [
-"https://fullstackfa.onrender.com"
-
-]
+CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
 TEMPLATES = [

@@ -24,7 +24,7 @@ function FormSubmit() {
     formData.append("photo", photo);
 
     axios
-      .post("http://127.0.0.1:8000/info", formData, {
+      .post("https://fullstackfa.onrender.com/info", formData, {
         headers: { Authorization: `Token ${localStorage.getItem("token")}` },
       })
       .then((response) => {
@@ -140,7 +140,7 @@ function FormSubmit() {
                         name="photo"
                         accept="image/*"
                         id="flat-button-file"
-                        required
+                        // required
                         multiple={false}
                         type="file"
                         className="h-10 border mt-3 py-2 rounded px-4 w-full bg-gray-50"
