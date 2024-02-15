@@ -1,5 +1,5 @@
 from logging import info
-from django.shortcuts import render
+
 from django.http import JsonResponse
 from .models import Info
 from .serializers import InfoSerializer
@@ -63,5 +63,3 @@ def info_detail(request,id,format=None):
 # def index(request):
 #     return HttpResponse("You're looking at question %s." )
 
-def index(request):
-    return render(request,'index.html')
