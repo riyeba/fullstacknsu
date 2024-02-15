@@ -9,7 +9,7 @@ function FormSubmit() {
   const [department, setDepartment] = useState("");
   const [phone, setPhone] = useState("");
   const [room, setRoom] = useState();
-  // const [photo, setPhoto] = useState();
+  const [photo, setPhoto] = useState();
   const [building, setBuilding] = useState();
 
   function SubmitInfo() {
@@ -21,7 +21,7 @@ function FormSubmit() {
     formData.append("phone_number", phone);
     formData.append("building_number", building);
     formData.append("room_number", room);
-    // formData.append("photo", photo);
+    formData.append("photo", photo);
 
     axios
       .post("https://fullstackfa.onrender.com/info", formData, {
@@ -134,7 +134,7 @@ function FormSubmit() {
                       />
                     </div>
 
-                    {/* <div className="md:col-span-2">
+                    <div className="md:col-span-2">
                       <label>photo</label>
                       <input
                         name="photo"
@@ -146,7 +146,7 @@ function FormSubmit() {
                         className="h-10 border mt-3 py-2 rounded px-4 w-full bg-gray-50"
                         onChange={(e) => setPhoto(e.target.files[0])}
                       />
-                    </div> */}
+                    </div>
                   </div>
 
                   <div className="md:col-span-5 text-right pt-3">

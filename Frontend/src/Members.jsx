@@ -10,27 +10,25 @@ import { redirect } from "react-router-dom";
 function Members() {
   const [info, setInfo] = useState([]);
 
-  function HandleInfo() {
-    axios
-      .get(`https://fullstackfa.onrender.com/info`, {
-        headers: {
-          Authorization: `Token ${localStorage.getItem("token")}`,
-        },
-      })
-      .then((response) => {
-        setInfo(response.data);
-      })
-      .catch((error) => {
-        toast.error(error.response.statusText);
-      });
-  }
+  
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      HandleInfo();
-    }, 1000);
-    return () => clearTimeout(timer);
-  });
+    function HandleInfo() {
+      axios
+        .get(`https://fullstackfa.onrender.com/info`, {
+          headers: {
+            Authorization: `Token ${localStorage.getItem("token")}`,
+          },
+        })
+        .then((response) => {
+          setInfo(response.data);
+        })
+        .catch((error) => {
+          toast.error(error.response.statusText);
+        });
+    }
+    HandleInfo()
+  },[]);
 
   async function deleteInf(id, el) {
     return await axios
