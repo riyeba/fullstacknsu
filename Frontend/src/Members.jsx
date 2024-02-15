@@ -10,25 +10,27 @@ import { redirect } from "react-router-dom";
 function Members() {
   const [info, setInfo] = useState([]);
 
-  
+  function HandleInfo() {
+    axios
+      .get(`https://fullstackfa.onrender.com/info/`, {
+        headers: {
+          Authorization: `Token ${localStorage.getItem("token")}`,
+        },
+      })
+      .then((response) => {
+        setInfo(response.data);
+      })
+      .catch((error) => {
+        toast.error(error.response.statusText);
+      });
+  }
 
   useEffect(() => {
-    function HandleInfo() {
-      axios
-        .get(`https://fullstackfa.onrender.com/info/`, {
-          headers: {
-            Authorization: `Token ${localStorage.getItem("token")}`,
-          },
-        })
-        .then((response) => {
-          setInfo(response.data);
-        })
-        .catch((error) => {
-          toast.error(error.response.statusText);
-        });
-    }
-    HandleInfo()
-  },[]);
+    const timer = setTimeout(() => {
+      HandleInfo();
+    }, 1000);
+    return () => clearTimeout(timer);
+  });
 
   async function deleteInf(id, el) {
     return await axios
@@ -74,6 +76,7 @@ function Members() {
                 <table className="w-full">
                   <thead>
                     <tr className="text-md font-bold tracking-wide text-left text-gray-900 bg-gray-50 uppercase border-b border-gray-600">
+                      <th className="px-4 py-3">Photo</th>
                       <th className="px-4 py-3">Name</th>
                       <th className="px-4 py-3">Phone</th>
                       <th className="px-4 py-3"> Building/room</th>
