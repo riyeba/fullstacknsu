@@ -92,7 +92,7 @@ function Members() {
                             <div className="relative w-8 h-8 mr-3 rounded-full">
                               <img
                                 className="object-cover w-full h-full rounded-full"
-                                src={"http://127.0.0.1:8000" + el?.photo}
+                                src={"https://fullstackfa.onrender.com" + el?.photo}
                               />
 
                               <div
